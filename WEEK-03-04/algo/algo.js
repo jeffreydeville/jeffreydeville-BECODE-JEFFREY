@@ -403,7 +403,7 @@ exo26("azpaip","appeizrp");
 //<><><><><><><><><><><><><><><><>ADVANCE<><><><><><><><><><><><><><><><><><><><><><>
 
 
-function EXO1(nombre){
+/* function EXO1(nombre){
     let i=1;
     do {
         if(i%3==0&&i%5==0){
@@ -420,4 +420,72 @@ function EXO1(nombre){
         
     } while (i<=nombre);
 }
-EXO1(20)
+EXO1(20) */
+
+
+
+/* const phrases={
+    phraseBateau:magazineText,
+    code:noteText,
+    EXO02:function (magazineText, noteText){
+    for(let i=0;i<noteText;i++){
+        phraseBateau=phraseBateau.toLowerCase
+        compteur[mot] = (compteur[mot] || 0) + 1;
+        
+    }
+
+    }
+}
+
+
+EXO02("this is a secret note to you from a secret admirer","this is a note to you from a secret admirer")
+
+EXO02("hello world hello","hello hello")
+ */
+
+
+function EXO3(text){
+    let texteClean=text.replace(/[^a-z0-9]/gi, '').toLowerCase() //bouge les caractere speciaux et les espaces. mais tout en miniscule.
+    
+
+    let textInverser = texteClean.split("").reverse().join("");
+    if(texteClean === textInverser){
+        return result=true
+    }
+    else{return result=false}
+    
+}  
+
+console.log(EXO3("kayak"));
+console.log(EXO3("race car"));
+console.log(EXO3("hello world"));
+
+function EXO04(str, num) {
+    // Créer une variable pour stocker le texte chiffré
+    let result = '';
+
+    // Normaliser le décalage pour gérer le retour à l'alphabet
+    num = num % 26;
+
+    // Parcourir chaque caractère du texte
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i]; // Prendre le caractère actuel
+        
+        // Appliquer le décalage pour les lettres minuscules
+        let code = char.charCodeAt(0);//va nous donner LE CODE ASCII en gros si 97 caractere miniscuele si 65 caractere maj.
+        if (char >= 'a' && char <= 'z') {
+            code = ((code - 97 + num + 26) % 26) + 97; // Décalage pour les lettres minuscules
+        } else if (char >= 'A' && char <= 'Z') {
+            code = ((code - 65 + num + 26) % 26) + 65; // Décalage pour les lettres majuscules
+        }
+        
+        result += String.fromCharCode(code); // Ajouter le caractère décalé ou non modifié
+    }
+
+    return result; // Retourner le texte chiffré
+}
+
+// Exemples d'utilisation
+console.log(EXO04("zoo keeper", 2)); // Sortie : "bqq mggrgt"
+console.log(EXO04("bqq mggrgt", -2)); // Sortie : "zoo keeper"
+console.log(EXO04("My name is Henrique", 3)); // Sortie : "Pb qdph lv Khquolwh"
