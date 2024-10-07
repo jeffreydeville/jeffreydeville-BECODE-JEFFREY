@@ -1,0 +1,93 @@
+@font-face{
+    font-family:myfont ;
+    src:url(static/NotoSansSymbols-Regular.ttf)
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1;
+}
+img{
+    width: 100%;
+}
+body{
+background-color: #2d4480;
+font-family: myfont;
+}
+.card{
+    position: relative;
+    width: 288px;
+    min-height: 469px;
+    margin: 150px auto;
+    padding: 35px auto;
+    border-radius: 27px;
+    border: 1px;
+    background-color: aliceblue;
+}
+h1{
+    padding-top: 30px;
+    width: 98px;
+    font-size: 36px;
+    font-weight: 100;
+    color: #292929;
+    margin: 40px auto;
+    letter-spacing: 2px;
+}
+.list{
+    display: flex;
+    min-width: 100px;
+    min-height: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: auto;
+    text-transform: uppercase;
+
+}
+img{
+    display: flex;
+    width:20px;
+    height:20px;
+    margin-right:25px;
+    margin-left: 40px;
+    object-fit:cover;
+}
+.card p{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.slogan p{
+    display: flex;
+    font-weight: 700;
+    letter-spacing: 8px;
+    font-size: 36px;
+    margin-top: 10px;
+    justify-content: center;
+}
+.forever p{
+    display: flex;
+    margin-top: 10px;
+    margin-right: 50px;
+    font-family: 'Allan';
+    font-weight: 300;
+    font-size: 36px;
+    color: #2d4480;
+    justify-content: right;
+}
+.Button button{
+    width: 181px;
+    height: 68px;
+    border-radius: 34px;
+    background-color: #FFBC0F;
+    border: none;
+    color:#2d4480;
+}
+.Button{
+    position: absolute;
+    bottom: -30px; 
+    left: 19%; 
+    width: 100%; 
+}
